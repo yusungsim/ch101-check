@@ -16,11 +16,20 @@ Usage
 
     For MacOS and Unix-like OS, use terminal emulator.
 
-2. Execute the main module with python in commandline as follows.
+2. Execute the main module with python in commandline as follows. You must give target txt file path as argument.
 
     ```
     # goto root folder of this project
+
     $ python3 main.py <input txt file name>
+    ```
+
+    You may need to move txt file in appropriate directory.
+
+    ```
+    # example: Place "zoom_log.txt" in "input" directory
+
+    $ python3 main.py input/zoom_log.txt
     ```
 
 3. The parsed result will be in `output` directory.
@@ -36,9 +45,11 @@ Caveats
 
     ```
     # format
+
     Time         시작  <Zoom username> : <ID> <Name>
 
     # example
+
     12:00:00	 시작  20201234_홍길동 : 20201234 홍길동
     ```
 
@@ -50,7 +61,9 @@ Caveats
     # example where program marks as invalid check
 
     13:00:00	 시작  20201234_홍길동 : 20201234 홍길동
+
     ...
+    
     14:10:00	 시작  길동 홍 : 20201234 홍길동
     ```
 
